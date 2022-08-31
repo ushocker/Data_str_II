@@ -1,0 +1,3 @@
+﻿  gcd.cpp
+C:\Users\Urban\source\repos\Data_Str_II\Assignment2\Assignment2\gcd.cpp(58,22): warning C4804: '>': unsafe use of type 'bool' in operation
+  Assignment2.vcxproj -> C:\Users\Urban\source\repos\Data_Str_II\Assignment2\x64\Debug\Assignment2.exe

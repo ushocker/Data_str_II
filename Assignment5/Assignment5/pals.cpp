@@ -39,6 +39,7 @@ int main()
 
     bool result;
     char input[60];
+    int length;
 
     ifstream infile("pals.txt");
 
@@ -54,9 +55,10 @@ int main()
         while (infile.getline(input, 60, '\n'))
         {
                     
+            length = (int) strlen(input);
             dispRev(input);
-            result = isPal(input, (int) strlen(input) - 1);
-            display(result, (int) strlen(input));
+            result = isPal(input, length - 1);
+            display(result, length);
             
         }
 

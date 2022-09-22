@@ -144,20 +144,20 @@ bool binSearch(int list[], int size, int target, int& compares)
 
         mid = (low + high) / 2;
 
-        if (++compares && list[mid] == target)
+        if (compares++, list[mid] == target)
         {
 
             found = true;
         }
 
-        else if (++compares && list[mid] > target)
+        else if (compares++, list[mid] > target)
         {
 
             high = (mid - 1);
 
         }
 
-        else if (++compares && list[mid] < target)
+        else
         {
 
             low = (mid + 1);

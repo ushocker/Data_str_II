@@ -28,11 +28,11 @@ int main()
 
     process(ordered, searchNums, 1000, ord, ordSearch);
     process(unordered, searchNums, 1000, unord, unOrdSearch);
-    //process(ordered, searchNums, 1000, bin, binSearch);
+    process(ordered, searchNums, 1000, bin, binSearch);
 
     updateStats(ord);
     updateStats(unord);
-    //updateStats(bin);
+    updateStats(bin);
 
     displayResults(ord, unord, bin);
 
@@ -58,15 +58,16 @@ bool ordSearch(int list[], int size, int target, int& compares)
 {
     bool found = false;
     int i = 0;
-    while (i < size && list[i] < target)
+    while (compares++, i < size && list[i] < target)
     {
+
         i++;
-        compares++;
+
     }
-    if (i < size && list[i] == target)
+    if (compares++, i < size && list[i] == target)
     {
         found = true;
-        compares++;
+
     }
 
     return found;
@@ -76,15 +77,17 @@ bool unOrdSearch(int list[], int size, int target, int& compares)
 {
     bool found = false;
     int i = 0;
-    while (i < size && list[i] != target)
+    while (compares++, i < size && list[i] != target)
     {
+
         i++;
-        compares++;
+
     }
-    if (i < size && list[i] == target)
+    if (compares++, i < size && list[i] == target)
     {
+
         found = true;
-        compares++;
+
     }
 
     return found;
@@ -92,9 +95,40 @@ bool unOrdSearch(int list[], int size, int target, int& compares)
 
 bool binSearch(int list[], int size, int target, int& compares)
 {
-    
+    bool found = false;
+    int low = 0;
+    int high = size-1;
+    int mid;
 
-    return false;
+    while (!(found) && low <= high)
+    {
+
+        mid = (low + high) / 2;
+
+        if (compares++, list[mid] == target)
+        {
+
+            found = true;
+            
+        }
+
+        else if (compares++, list[mid] > target)
+        {
+
+            high = (mid - 1);
+            
+        }
+
+        else if (compares++, list[mid] < target)
+        {
+
+            low = (mid + 1);
+        }
+
+    }
+
+
+    return found;
 }
 
 void updateStats(Results& res)

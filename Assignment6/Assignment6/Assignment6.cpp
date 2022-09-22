@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -58,17 +59,18 @@ bool ordSearch(int list[], int size, int target, int& compares)
 {
     bool found = false;
     int i = 0;
-    while (compares++, i < size && list[i] < target)
+    while (i < size && ++compares && list[i] < target)
     {
 
         i++;
-
+        
     }
-    if (compares++, i < size && list[i] == target)
+    if (i < size && ++compares && list[i] == target)
     {
         found = true;
 
     }
+
 
     return found;
 }
@@ -77,18 +79,17 @@ bool unOrdSearch(int list[], int size, int target, int& compares)
 {
     bool found = false;
     int i = 0;
-    while (compares++, i < size && list[i] != target)
+    while (i < size && ++compares && list[i] != target)
     {
 
         i++;
-
     }
-    if (compares++, i < size && list[i] == target)
+    if (i < size && ++compares && list[i] == target)
     {
 
         found = true;
-
     }
+
 
     return found;
 }
@@ -105,24 +106,24 @@ bool binSearch(int list[], int size, int target, int& compares)
 
         mid = (low + high) / 2;
 
-        if (compares++, list[mid] == target)
+        if (++compares && list[mid] == target)
         {
 
             found = true;
-            
         }
 
-        else if (compares++, list[mid] > target)
+        else if (++compares && list[mid] > target)
         {
 
             high = (mid - 1);
-            
+
         }
 
-        else if (compares++, list[mid] < target)
+        else if (++compares && list[mid] < target)
         {
 
             low = (mid + 1);
+
         }
 
     }
@@ -142,10 +143,13 @@ void updateStats(Results& res)
 void displayResults(const Results& resOrd, const Results& resUnOrd, const Results& resBin)
 {
 
-    printf("%40s%10s%10s\n", "Unordered", "Ordered", "Bin");
-    printf("Number of Successful Searches %10i%10i%10i\n\n", resUnOrd.numSuccesses, resOrd.numSuccesses, resBin.numSuccesses);
-    printf("Precent of Successful Searches %9.2f%%%9.2f%%%9.2f%%\n\n", resUnOrd.percSuccesses, resOrd.percSuccesses, resBin.percSuccesses);
-    printf("Average compares per search %12.0f%10.0f%10.0f\n\n", resUnOrd.avgNumCompares, resOrd.avgNumCompares, resBin.avgNumCompares);
+    cout << fixed << setw(40) << "Unordered" << setw(10) <<  "Ordered" << setw(10) << "Bin" << endl;
+    cout << fixed << "Number of Successful Searches" << setw(11) << resUnOrd.numSuccesses << setw(10)
+        << resOrd.numSuccesses << setw(10) << resBin.numSuccesses << endl << endl;
+    cout << fixed << setprecision(2) << "Precent of Successful Searches" << setw(10) << resUnOrd.percSuccesses << "%"
+        << setw(9) << resOrd.percSuccesses << "%" << setw(9) << resBin.percSuccesses << "%" << endl << endl;
+    cout << fixed << setprecision(0) << "Average compares per search" << setw(13) << resUnOrd.avgNumCompares
+        << setw(10) << resOrd.avgNumCompares << setw(10) << resBin.avgNumCompares << endl << endl;
 
 }
 

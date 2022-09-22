@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment6.cpp" />
+    <ClCompile Include="Searches.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Results.h" />

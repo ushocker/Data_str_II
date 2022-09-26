@@ -20,10 +20,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Homework\Homework\Hashtable.h">
+    <ClInclude Include="Hashtable.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Homework\Homework\Node.h">
+    <ClInclude Include="Node.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

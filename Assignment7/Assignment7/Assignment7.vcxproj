@@ -130,8 +130,8 @@
     <ClCompile Include="Assignment7.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Homework\Homework\Hashtable.h" />
-    <ClInclude Include="..\..\..\Homework\Homework\Node.h" />
+    <ClInclude Include="Hashtable.h" />
+    <ClInclude Include="Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

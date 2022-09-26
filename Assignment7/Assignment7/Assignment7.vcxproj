@@ -130,6 +130,7 @@
     <ClCompile Include="Assignment7.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assignment7.h" />
     <ClInclude Include="Hashtable.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>

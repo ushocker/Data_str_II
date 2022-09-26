@@ -3,9 +3,19 @@
 
 #include <iostream>
 
+using namespace std;
+#include "Hashtable.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    Hashtable<int> test(66);
+
+    test.insert(20);
+    //test.testreadout(20);
+    test.insert(20);
+    test.testreadout(20);
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

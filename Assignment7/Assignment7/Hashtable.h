@@ -1,5 +1,4 @@
 
-
 #ifndef HASHTABLE_H
 #define HASHTABLE_H
 
@@ -35,13 +34,13 @@ Hashtable<T>::Hashtable(int s)
 	{
 		s++;
 	}
-	while (isPrime(s))
+	while (_isPrime(s))
 	{
-		s += 2
+		s += 2;
 	}
 
 	size = s;
-	table = new table[size];
+	table = new Node<T>[size];
 }
 
 //******************Here**************************
@@ -49,18 +48,18 @@ Hashtable<T>::Hashtable(int s)
 template<typename T>
 Hashtable<T>::~Hashtable()
 {
-	Node<T> pTemp;
+	Node<T>* pTemp;
 
 	for (int i = 0; i < size; i++)
 	{
-		while (table[i]->next != nullptr)
+		while (table[i].next != nullptr)
 		{
-			pTemp = table[i]->next;
-			table[i]->next = pTemp->next;
+			pTemp = table[i].next;
+			table[i].next = pTemp->next;
 			delete pTemp;
 		}
 	}
-	delete table[];
+	delete[] table;
 }
 
 //******************Here**************************
@@ -73,30 +72,35 @@ bool Hashtable<T>::insert(const T& input)
 	Node<T>* pTemp;
 	int hash = _hash(input);
 
-	nNode = new (nothrow) Node<T>(input, nullptr);
-
-	if (table[hash]->data.empty())  //to revise
+	if (table[hash].data)  
 	{
-		pTemp = table[hash];
+		nNode = new (nothrow) Node<T>(input, nullptr);
 
-		while (pTemp->next != nullptr)
+		if (table[hash].next != nullptr)
 		{
-			pTemp = pTemp->next
-		}
+			pTemp = table[hash].next;
+			while (pTemp->next != nullptr)
+			{
+				pTemp = pTemp->next;
+			}
 
-		pTemp->next = nNode;
+			pTemp->next = nNode;
+
+		}
+		else
+		{
+			table[hash].next = nNode;
+		}
 		success = true;
 	}
 	else
 	{
-		table[hash] = nNode;
+		table[hash].data = input;
 		success = true;
 	}
 
 	return success;
 }
-
-
 
 template<typename T>
 bool Hashtable<T>::_isPrime(int input) const

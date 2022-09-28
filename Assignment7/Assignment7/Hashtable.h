@@ -3,11 +3,10 @@
 #define HASHTABLE_H
 
 #include <new>
-#include <iomanip>
+
 #include "Node.h"
 
-
-
+//*****************************************************************************************************
 
 template <typename T>
 class Hashtable
@@ -29,7 +28,7 @@ public:
 	
 };
 
-
+//*****************************************************************************************************
 
 template<typename T>
 Hashtable<T>::Hashtable(int s)
@@ -48,7 +47,7 @@ Hashtable<T>::Hashtable(int s)
 	table = new Node<T>[size];
 }
 
-//******************Here**************************
+//*****************************************************************************************************
 
 template<typename T>
 Hashtable<T>::~Hashtable()
@@ -67,7 +66,7 @@ Hashtable<T>::~Hashtable()
 	delete[] table;
 }
 
-//******************Here**************************
+//*****************************************************************************************************
 
 template<typename T>
 bool Hashtable<T>::insert(const T& input)
@@ -95,20 +94,26 @@ bool Hashtable<T>::insert(const T& input)
 	return success;
 }
 
+//*****************************************************************************************************
+
 template<typename T>
 void Hashtable<T>::displayTable() const
 {
 	_tableOut(cout);
 }
 
+//*****************************************************************************************************
+
 template<typename T>
 void Hashtable<T>::writeFile() const
 {
 	ofstream offile("studentTable.txt");
 	_tableOut(offile);
-	offile.close;
+	offile.close();
 
 }
+
+//*****************************************************************************************************
 
 template<typename T>
 bool Hashtable<T>::_isPrime(int input) const
@@ -126,13 +131,15 @@ bool Hashtable<T>::_isPrime(int input) const
 	return result;
 }
 
-
+//*****************************************************************************************************
 
 template<typename T>
 int Hashtable<T>::_hash(const T& data) const
 {
 	return data % size;
 }
+
+//*****************************************************************************************************
 
 template<typename T>
 void Hashtable<T>::_tableOut(ostream& out) const

@@ -1,0 +1,66 @@
+[00]  17424/Nakamu       
+[01]  11749/Issacs          23497/Fault,
+[02]  
+[03]  20991/August          19077/Medes,
+[04]  15052/Einste       
+[05]  11951/Mouse,           4559/Shyste
+[06]  10236/Andrew          11688/Kronec
+[07]  22447/Zylstr       
+[08]  10304/Deutsc       
+[09]  
+[10]  
+[11]  
+[12]  
+[13]  16183/Kuts,        
+[14]  28658/Cicero       
+[15]  24237/Euler,          29583/Yewlis
+[16]  23314/Macdon       
+[17]  31631/Aristo       
+[18]  17376/Scroog           5430/Nighti
+[19]  
+[20]  
+[21]  30381/Elba,        
+[22]  14674/Rockne       
+[23]  
+[24]  21144/Pasteu       
+[25]   4777/Gauss,           9463/Hochsc,   25831/Santam
+[26]  
+[27]  32631/Freud,       
+[28]  15802/Pascal       
+[29]  15671/Rembra       
+[30]  
+[31]  14815/Tchaik          30655/Angelo,    7885/Fibona
+[32]   4454/Atanas       
+[33]  25377/Porgy,       
+[34]   5710/Busch,       
+[35]  22277/Princi       
+[36]   5316/GotoDi           3930/Leibni
+[37]  
+[38]  
+[39]  
+[40]  30268/Newman          16540/Weerd,
+[41]   9743/Johnso       
+[42]  
+[43]  
+[44]  
+[45]   7107/Shoema       
+[46]  
+[47]  15755/Vanden          13511/Pitt, ,   27503/Fahren
+[48]  18264/Lucky,          23544/Gestal,   26316/Custer
+[49]  15889/Gazell       
+[50]  
+[51]  
+[52]  30280/Dewey,          19918/Virus,
+[53]  
+[54]  
+[55]  
+[56]  16622/Issacs          23750/Vespuc,    7448/Roosev,   30878/Lewis,,    7844/Aardva
+[57]  
+[58]  
+[59]  30749/Mendel       
+[60]  20454/Chicit          32598/Xerxes
+[61]  
+[62]  
+[63]  18213/Marx,        
+[64]  
+[65]   5873/Psycho       

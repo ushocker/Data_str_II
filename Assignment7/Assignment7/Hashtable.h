@@ -3,7 +3,9 @@
 #define HASHTABLE_H
 
 #include <new>
+#include <iomanip>
 #include "Node.h"
+
 
 
 
@@ -16,11 +18,14 @@ private:
 
 	bool _isPrime(int) const;
 	int _hash(const T&) const;
+	void _tableOut(ostream& out) const;
 
 public:
 	Hashtable(int = 23);
 	~Hashtable();
 	bool insert(const T&);
+	void displayTable() const;
+	void writeFile() const;
 	
 };
 
@@ -69,29 +74,17 @@ bool Hashtable<T>::insert(const T& input)
 {
 	bool success = false;
 	Node<T>* nNode;
-	Node<T>* pTemp;
 	int hash = _hash(input);
 
-	if (table[hash].data)  
+	if (table[hash].data != 0)  
 	{
-		nNode = new (nothrow) Node<T>(input, nullptr);
+		nNode = new (nothrow) Node<T>(input, table[hash].next);
 
-		if (table[hash].next != nullptr)
-		{
-			pTemp = table[hash].next;
-			while (pTemp->next != nullptr)
-			{
-				pTemp = pTemp->next;
-			}
-
-			pTemp->next = nNode;
-
-		}
-		else
+		if (nNode != nullptr)
 		{
 			table[hash].next = nNode;
+			success = true;
 		}
-		success = true;
 	}
 	else
 	{
@@ -100,6 +93,21 @@ bool Hashtable<T>::insert(const T& input)
 	}
 
 	return success;
+}
+
+template<typename T>
+void Hashtable<T>::displayTable() const
+{
+	_tableOut(cout);
+}
+
+template<typename T>
+void Hashtable<T>::writeFile() const
+{
+	ofstream offile("studentTable.txt");
+	_tableOut(offile);
+	offile.close;
+
 }
 
 template<typename T>
@@ -124,6 +132,34 @@ template<typename T>
 int Hashtable<T>::_hash(const T& data) const
 {
 	return data % size;
+}
+
+template<typename T>
+void Hashtable<T>::_tableOut(ostream& out) const
+{
+	Node<T>* pTemp;
+
+	for (int i = 0; i < size; i++)
+	{
+		out << '[' << setfill('0') << setw(2) << i << ']' << setfill(' ') << setw(2) << "";
+		if (table[i].data != 0)
+		{
+			out << table[i].data << setw(7) << "";
+			pTemp = table[i].next;
+
+			while (pTemp != nullptr)
+			{
+				out << setw(3) << "" << pTemp->data;
+				pTemp = pTemp->next;
+				if (pTemp != nullptr)
+					out << ',';
+			}
+			
+		}
+		
+		out << endl;
+
+	}
 }
 
 #endif

@@ -1,3 +1,26 @@
+//*****************************************************************************************************
+//
+//		File:					Hashtable.h
+//
+//		Student:				Urban Shocker
+//
+//		Assignment:				Program #07
+//
+//		Course Name:			Data Structures II
+//
+//		Course Number:			COSC 3100-01
+//
+//		Due:					22/09/22
+//
+//
+//		This program Creates the student data structure
+//	
+//		Other files required: 
+//			1.	Node.h
+//			2.	StudentList.cpp
+//          3.  student.h
+//			
+//*****************************************************************************************************
 
 #ifndef HASHTABLE_H
 #define HASHTABLE_H
@@ -34,11 +57,11 @@ template<typename T>
 Hashtable<T>::Hashtable(int s)
 {
 	s++;
-	if (s % 2)
+	if (s % 2 == 0)
 	{
 		s++;
 	}
-	while (_isPrime(s))
+	while (!_isPrime(s))
 	{
 		s += 2;
 	}
@@ -120,7 +143,7 @@ bool Hashtable<T>::_isPrime(int input) const
 {
 	bool result = true;
 
-	for (int i = 3; i < 21 && result; i += 2)
+	for (int i = 3; i < 20 && result; i += 2)
 	{
 		if (input % i == 0)
 		{
@@ -146,6 +169,7 @@ void Hashtable<T>::_tableOut(ostream& out) const
 {
 	Node<T>* pTemp;
 
+	out << "Address prime area" << setw(18) << "Overflow" << endl;
 	for (int i = 0; i < size; i++)
 	{
 		out << '[' << setfill('0') << setw(2) << i << ']' << setfill(' ') << setw(2) << "";

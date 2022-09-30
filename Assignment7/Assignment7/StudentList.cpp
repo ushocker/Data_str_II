@@ -1,3 +1,26 @@
+//*****************************************************************************************************
+//
+//		File:					StudentList.cpp
+//
+//		Student:				Urban Shocker
+//
+//		Assignment:				Program #07
+//
+//		Course Name:			Data Structures II
+//
+//		Course Number:			COSC 3100-01
+//
+//		Due:					22/09/22
+//
+//
+//		This program Creates the student data structure
+//	
+//		Other files required: 
+//			1.	Node.h
+//			2.	Student.h
+//          3.  Hashtable.h
+//			
+//*****************************************************************************************************
 
 #include <iostream>
 #include <fstream>

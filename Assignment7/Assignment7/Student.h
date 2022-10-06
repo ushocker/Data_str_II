@@ -4,13 +4,13 @@
 //
 //		Student:				Urban Shocker
 //
-//		Assignment:				Program #07
+//		Assignment:				Program #08
 //
 //		Course Name:			Data Structures II
 //
 //		Course Number:			COSC 3100-01
 //
-//		Due:					22/09/22
+//		Due:					06/10/22
 //
 //
 //		This program Creates the student data structure

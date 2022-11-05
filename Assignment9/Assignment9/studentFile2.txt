@@ -1,0 +1,65 @@
+20 Johnson, James L
+Waupun, Wisconsin
+7345229
+M 1 15 3.15
+ENGR
+10 Andrews, Peter J
+Grand-Rapids, Michigan
+9493301
+M 2 42 2.78
+CPSC
+30 VandenVander, Vanessa V
+Fremont, Michigan
+5509237
+F 4 110 3.74
+HIST
+5 Aristotle, Alice A
+Chino, California
+3330861
+F 3 78 3.10
+PHIL
+15 Lucky, Lucy L
+Grandville, Michigan
+7745424
+F 5 66 2.29
+HIST
+2 Euler, Lennie L
+Three_Rivers, Michigan
+6290017
+M 1 15 3.83
+MATH
+6 Nakamura, Toky O
+Chicago, Illinois
+4249665
+F 1 12 1.95
+SOCI
+17 Tchaikovsky, Wolfgang A
+Byron-Center, Michigan
+8845115
+M 3 79 2.75
+MUSC
+25 Psycho, II,  Prunella E
+De_Motte, Indiana
+5384609
+F 4 120 2.99
+PSYC
+35 Custer, General G
+Badlands, South_Dakota
+5552995
+M 3 40 1.95
+HIST
+22 Fahrenheit, Felicia O
+Sheboygan, Wisconsin
+5154997
+F 2 40 3.85
+CHEM
+27 Deutsch, Sprechen Z
+Sparta, Michigan
+8861201
+F 5 14 3.05
+GERM
+37 Augusta, Ada B
+Lakewood, California
+7172339
+F 2 46 3.83
+CPSC

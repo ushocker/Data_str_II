@@ -205,11 +205,10 @@ void findStudent(BST<Student>& list)
     if (found)
     {
         cout << "Student Found" << endl;
+        cout << "ID" << setw(8) << "Name" << setw(24) << "GPA" << setw(8) << "Major" << endl;
+        displayOneStu(student);
     }
-    else
-    {
-        cout << "Student not Found" << endl;
-    }
+    
 }
 
 //*****************************************************************************************************
@@ -228,10 +227,8 @@ void removeStudent(BST<Student>& list)
     if (found)
     {
         cout << "Student Removed" << endl;
-    }
-    else
-    {
-        cout << "Student not Removed" << endl;
+        cout << "ID" << setw(8) << "Name" << setw(24) << "GPA" << setw(8) << "Major" << endl;
+        displayOneStu(student);
     }
 }
 
@@ -240,6 +237,7 @@ void removeStudent(BST<Student>& list)
 void updateStudent(BST<Student>& list)
 {
     Student student;
+    bool found;
 
     cout << "Enter Student ID: ";
     cin >> student.id;
@@ -267,7 +265,14 @@ void updateStudent(BST<Student>& list)
     cin >> student.major;
     cin.ignore();
 
-    list.update(student);
+    found = list.update(student);
+
+    if (found)
+    {
+        cout << "Student Updated" << endl;
+        cout << "ID" << setw(8) << "Name" << setw(24) << "GPA" << setw(8) << "Major" << endl;
+        displayOneStu(student);
+    }
 
 }
 

@@ -132,8 +132,8 @@ template<typename T>
 
 	 if (pTemp != nullptr)
 	 {
-		 root = _remove(dataOut, root);
 		 dataOut = pTemp->data;
+		 root = _remove(dataOut, root);
 		 success = true;
 	 }
 

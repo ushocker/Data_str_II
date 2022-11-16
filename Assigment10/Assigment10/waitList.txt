@@ -1,0 +1,16 @@
+============================================================
+                     Wait List
+============================================================
+      Last Name       First Name      Arival  Priority
+      Nguyen          Baclan          3       93
+      Trapp           Amanda          2       90
+      Rexroad         Warren          5       74
+      Gonzales        Jorge           6       61
+      Devaux          Bryan           1       57
+      Lightfoot       Dave            10      56
+      Chu             Steve           9       37
+      Hung            Paula           7       30
+      Brown           Joanne          11      24
+      Mason           Lou             8       19
+      Gilley          Sarah           4       14
+============================================================
